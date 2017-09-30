@@ -1,0 +1,41 @@
+[user]
+    name = Tapasweni Pathak
+    email = tapaswenipathak@gmail.com
+[credential]
+    helper = cache --timeout=3600
+[sendmail]
+    from = Tapasweni Pathak<tapaswenipathak@gmail.com>
+    smtpserver = imap.gmail.com
+[core]
+    editor = vi
+    excludesfile = ~/.gitignore
+[alias]
+    amend = commit --amend --all
+    st = status
+    cl = clone
+    c = commit -am
+    fpush = push --force
+    hrst = reset --hard
+    co = checkout
+    gl = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[color]
+    ui = always
+[color "diff"]
+    meta = green bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
+[color "branch"]
+    current = green bold
+    local = yellow
+    remote = magenta
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = magenta
+[help]
+    autocorrect = 1
+[fetch]
+    prune = true
+[stash]
+    showPatch = true
