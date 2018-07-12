@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo $(uname -r)
+
 . ./installthese.sh
 . ./gitclonethese.sh
 . ./remainingthings.sh
