@@ -52,3 +52,13 @@ sudo apt-get install npm
 ## Install VLC
 sudo apt-get install vlc
 
+## Install autojump
+sudo apt-get install autojump
+if [$? -ne 0]; then
+	sudo apt-get --force-yes remove python3-pkg-resources
+	sudo apt-get --force-yes remove python3-setuptools
+	sudo apt autoremove
+fi
+sudo apt-get install python3-setuptools
+sudo apt-get install autojump
+exit $?
