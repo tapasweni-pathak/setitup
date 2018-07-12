@@ -1,0 +1,19 @@
+.\" Manpage for http405.
+.\" Contact tapaswenipathak@gmail.com to correct errors or typos.
+.TH man 8 "April 2017" "1.0" "http405 man page"
+.SH NAME
+http405 \- Client Error Responses
+.SH SYNOPSIS
+http405 - Method Not Allowed
+.SH DESCRIPTION
+The request method is known by the server but has been disabled and cannot be used.
+For example, an API may forbid DELETE-ing a resource. The two mandatory methods,
+GET and HEAD, must never be disabled and should not return this error code.
+.SH OPT	IONS
+http405 does not take any options.
+.SH SEE ALSO
+http*
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Tapasweni Pathak (tapaswenipathak@gmail.com)

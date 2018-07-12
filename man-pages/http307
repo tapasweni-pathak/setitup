@@ -1,0 +1,21 @@
+.\" Manpage for http307.
+.\" Contact tapaswenipathak@gmail.com to correct errors or typos.
+.TH man 8 "April 2017" "1.0" "http307 man page"
+.SH NAME
+http307 \- Redirection Messages
+.SH SYNOPSIS
+http307 - Temporary Redirect
+.SH DESCRIPTION
+The server sends this response to direct the client to get the requested resource at
+another URI with same method that was used in the prior request. This has the same
+semantics as the 302 Found HTTP response code, with the exception that the user agent
+must not change the HTTP method used: If a POST was used in the first request, a POST
+must be used in the second request.
+.SH OPTIONS
+http307 does not take any options.
+.SH SEE ALSO
+http*
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Tapasweni Pathak (tapaswenipathak@gmail.com)

@@ -1,0 +1,17 @@
+.\" Manpage for http418.
+.\" Contact tapaswenipathak@gmail.com to correct errors or typos.
+.TH man 8 "April 2017" "1.0" "http418 man page"
+.SH NAME
+http418 \- Client Error Responses
+.SH SYNOPSIS
+http418 - I'm a teapot
+.SH DESCRIPTION
+The server refuses the attempt to brew coffee with a teapot.
+.SH OPT	IONS
+http418 does not take any options.
+.SH SEE ALSO
+http*
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Tapasweni Pathak (tapaswenipathak@gmail.com)

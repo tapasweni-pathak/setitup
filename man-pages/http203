@@ -1,0 +1,19 @@
+.\" Manpage for http203.
+.\" Contact tapaswenipathak@gmail.com to correct errors or typos.
+.TH man 8 "April 2017" "1.0" "http203 man page"
+.SH NAME
+http203 \- Non-Authoritative Information
+.SH SYNOPSIS
+http203 - Reset Content
+.SH DESCRIPTION
+This response code means returned meta-information set is not exact set as available
+from the origin server, but collected from a local or a third party copy. Except this
+condition, 200 OK response should be preferred instead of this response
+.SH OPTIONS
+http203 does not take any options.
+.SH SEE ALSO
+http*
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Tapasweni Pathak (tapaswenipathak@gmail.com)

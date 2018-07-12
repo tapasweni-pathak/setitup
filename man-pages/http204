@@ -1,0 +1,18 @@
+.\" Manpage for http204.
+.\" Contact tapaswenipathak@gmail.com to correct errors or typos.
+.TH man 8 "April 2017" "1.0" "http204 man page"
+.SH NAME
+http204 \- Successful Responses
+.SH SYNOPSIS
+http204 - No Content
+.SH DESCRIPTION
+There is no content to send for this request, but the headers may be useful.
+The user-agent may update its cached headers for this resource with the new ones.
+.SH OPTIONS
+http204 does not take any options.
+.SH SEE ALSO
+http*
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Tapasweni Pathak (tapaswenipathak@gmail.com)

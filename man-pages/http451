@@ -1,0 +1,17 @@
+.\" Manpage for http451.
+.\" Contact tapaswenipathak@gmail.com to correct errors or typos.
+.TH man 8 "April 2017" "1.0" "http451 man page"
+.SH NAME
+http451 \- Client Error Responses
+.SH SYNOPSIS
+http451 - Unavailable For Legal Reasons
+.SH DESCRIPTION
+The user requests an illegal resource, such as a web page censored by a government.
+.SH OPT	IONS
+http451 does not take any options.
+.SH SEE ALSO
+http*
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Tapasweni Pathak (tapaswenipathak@gmail.com)

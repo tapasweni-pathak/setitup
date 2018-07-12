@@ -1,0 +1,18 @@
+.\" Manpage for http205.
+.\" Contact tapaswenipathak@gmail.com to correct errors or typos.
+.TH man 8 "April 2017" "1.0" "http205 man page"
+.SH NAME
+http205 \- Successful Responses
+.SH SYNOPSIS
+http205 - Reset Content
+.SH DESCRIPTION
+This response code is sent after accomplishing request to tell user agent reset
+document view which sent this request.
+.SH OPTIONS
+http205 does not take any options.
+.SH SEE ALSO
+http*
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Tapasweni Pathak (tapaswenipathak@gmail.com)

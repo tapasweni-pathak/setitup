@@ -1,0 +1,21 @@
+.\" Manpage for http308.
+.\" Contact tapaswenipathak@gmail.com to correct errors or typos.
+.TH man 8 "April 2017" "1.0" "http308 man page"
+.SH NAME
+http308 \- Redirection Messages
+.SH SYNOPSIS
+http308 - Permanent Redirect
+.SH DESCRIPTION
+This means that the resource is now permanently located at another URI, specified
+by the Location: HTTP Response header. This has the same semantics as the 301 Moved
+Permanently HTTP response code, with the exception that the user agent must not
+change the HTTP method used: If a POST was used in the first request, a POST must
+be used in the second request.
+.SH OPT	IONS
+http308 does not take any options.
+.SH SEE ALSO
+http*
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Tapasweni Pathak (tapaswenipathak@gmail.com)
