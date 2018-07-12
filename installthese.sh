@@ -54,11 +54,28 @@ sudo apt-get install vlc
 
 ## Install autojump
 sudo apt-get install autojump
-if [$? -ne 0]; then
+if [ $? -ne 0 ]; then
 	sudo apt-get --force-yes remove python3-pkg-resources
 	sudo apt-get --force-yes remove python3-setuptools
 	sudo apt autoremove
 fi
 sudo apt-get install python3-setuptools
 sudo apt-get install autojump
-exit $?
+if [ $? -ne 0 ]; then
+	exit $?
+fi
+
+## Install Linux tools
+v=`uname -r`
+sudo apt-get install linux-tools-`${s/-generic/}` -y
+sudo apt-get install strace
+
+## Install tldr
+sudo npm install -g tldr
+
+## Install Docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install -y docker-ce
+sudo systemctl status docker
