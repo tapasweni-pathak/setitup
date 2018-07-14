@@ -114,5 +114,13 @@ echo | sudo add-apt-repository ppa:nathan-renniewaldock/flux
 sudo apt update
 echo | sudo apt-get install fluxgui
 
+## Install libgraph
+wget http://download.savannah.gnu.org/releases/libgraph/libgraph-1.0.2.tar.gz
+tar -xvzf libgraph-1.0.2
+cd libgraph-1.0.2
+./configure
+sudo make
+sudo make install
+sudo cp /usr/local/lib/libgraph.* /usr/lib
 
 ## TODO: Pipe echo wherever needed, no input from user should be required
