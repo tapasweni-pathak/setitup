@@ -9,9 +9,8 @@ cp ~/setitup/dotfiles/.gdbinit ~/.gdbinit
 cp ~/setitup/dotfiles/.esmptrc ~/.esmptrc
 
 ## Install anything remaining depending
-sudo gnome-font-viewer font/Consolas.ttf 
+sudo gnome-font-viewer font/Consolas.ttf
 dconf load '/org/gnome/terminal/' < ~/setitup/dotfiles/gnome-terminal-settings
 vim +PluginInstall +qall
 cp ~/setitup/man-pages/.* /usr/local/man/man1/.*
 gzip /usr/local/man/man1/.*
-

@@ -114,6 +114,9 @@ echo | sudo add-apt-repository ppa:nathan-renniewaldock/flux
 sudo apt update
 echo | sudo apt-get install fluxgui
 
+## Install Doxygen
+echo | sudo apt install doxygen
+
 ## Install libgraph
 wget http://download.savannah.gnu.org/releases/libgraph/libgraph-1.0.2.tar.gz
 tar -xvzf libgraph-1.0.2

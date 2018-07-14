@@ -16,6 +16,9 @@ ssh -T git@github.com
 . ./gitclonethese.sh
 . ./remainingthings.sh
 
+git clone git@github.com:jeaye/stdman.git
+cd stdman && ./configure && make install
+
 welcome(){
 
 
