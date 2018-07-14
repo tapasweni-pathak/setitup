@@ -1,0 +1,38 @@
+[legacy/keybindings]
+reset-and-clear='<Primary>r'
+new-tab='<Primary>t'
+find-previous='<Primary>h'
+copy='<Primary>c'
+prev-tab='<Primary>bracketleft'
+new-window='<Primary>n'
+close-tab='<Primary>w'
+find='<Primary>f'
+close-window='<Primary>q'
+reset='<Primary>r'
+find-next='<Primary>g'
+paste='<Primary>v'
+find-clear='<Primary>j'
+next-tab='<Primary>bracketright'
+zoom-in='<Primary>plus'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+foreground-color='rgb(0,0,0)'
+rewrap-on-resize=true
+visible-name=''
+palette=['rgb(0,0,0)', 'rgb(205,0,0)', 'rgb(0,205,0)', 'rgb(205,205,0)', 'rgb(0,0,205)', 'rgb(205,0,205)', 'rgb(0,205,205)', 'rgb(250,235,215)', 'rgb(64,64,64)', 'rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(255,255,0)', 'rgb(0,0,255)', 'rgb(255,0,255)', 'rgb(0,255,255)', 'rgb(255,255,255)']
+default-size-columns=80
+default-size-rows=24
+cursor-shape='ibeam'
+scroll-on-output=false
+use-theme-colors=false
+use-system-font=false
+use-transparent-background=false
+font='Consolas 13'
+use-theme-transparency=false
+allow-bold=false
+scrollback-unlimited=true
+bold-color-same-as-fg=true
+background-color='rgb(255,255,255)'
+
+[legacy]
+schema-version=uint32 3

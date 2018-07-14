@@ -1,2 +1,3 @@
 # setitup
-Everything to setup a new system
+
+Things to setup a personal system.
