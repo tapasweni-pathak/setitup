@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo $(uname -r)
+echo $(uname -a)
+echo $(dpkg --print-architecture)
+echo 'cpu'
+echo $(cat /proc/cpuinfo | grep 'model name')
 
 . ./installthese.sh
 
