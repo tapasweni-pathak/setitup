@@ -1,9 +1,11 @@
 #!/bin/bash
 
+echo 'system info'
 echo $(uname -a)
+echo 'cpu architecture'
 echo $(dpkg --print-architecture)
 echo 'cpu'
-echo $(cat /proc/cpuinfo | grep 'model name')
+echo $(cat /proc/cpuinfo)
 
 . ./installthese.sh
 
