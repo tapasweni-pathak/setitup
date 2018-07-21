@@ -1,51 +1,83 @@
 #!/bin/sh
 
-## Install curl
-sudo apt install curl && sudo apt update
+echo 'curl'
+curl --version
+if [ $? -ne 0 ]; then
+	sudo apt install curl && sudo apt update
+fi
 
-## Install native packages
+echo 'native packages'
 clear;
-sudo apt-get install -y build-essential
+dpkg -s gcc
+if [ $? -ne 0 ]; then
+	echo | sudo apt-get install build-essential
+fi
 
-## Install Vim
+echo 'Vim'
 clear;
-sudo apt-get install -y vim;
+vim --version
+if [ $? -ne 0 ]; then
+	echo | sudo apt-get install vim;
+fi
 
-## Install sublime
+
+echo 'sublime'
 clear;
-sudo add-apt-repository ppa:webupd8team/sublime-text-3;
-sudo apt-get install sublime-text-installer;
+subl --version
+if [ $? -ne 0 ]; then
+	sudo add-apt-repository ppa:webupd8team/sublime-text-3;
+	sudo apt-get install sublime-text-installer;
+fi
 
-## Install Mutt
-sudo apt-get install mutt;
-
-## Install Git
+echo 'Mutt'
 clear;
-sudo apt-get install git;
+mutt -v
+if [ $? -ne 0 ]; then
+	sudo apt-get install mutt;
+fi
 
-## Install pip3
+echo 'Git'
 clear;
-sudo apt-get install python3-pip;
+git --version
+if [ $? -ne 0 ]; then
+	sudo apt-get install git;
+fi
 
-## Install virtualenv
+echo 'pip3'
 clear;
-sudo pip3 install virtualenv;
+pip3 --version
+if [ $? -ne 0 ]; then
+	sudo apt-get install python3-pip;
+fi
 
-## Install thefuck
+echo 'virtualenv'
 clear;
-sudo pip3 install thefuck;
+virtualenv --version
+if [ $? -ne 0 ]; then
+	sudo pip3 install virtualenv;
+fi
 
-## For linux-kernel
+echo 'thefuck'
 clear;
-sudo apt-get install vim libncurses5-dev gcc make git exuberant-ctags libssl-dev
-sudo apt-get install gitk
-sudo apt-get install git-email
+thefuck --version
+if [ $? -ne 0 ]; then
+	sudo pip3 install thefuck;
+fi
 
-## Install Heroku CLI
+echo 'linux-kernel'
+clear;
+dpkg -s libncurses5-dev git exuberant-ctags libssl-dev
+if [ $? -ne 0]; then
+	sudo apt install vim libncurses5-dev git exuberant-ctags libssl-dev
+	sudo apt install gitk
+	sudo apt install git-email
+fi
+
+echo 'Heroku CLI'
 clear;
 wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh;
 
-## Install ls--
+echo 'ls--'
 clear;
 cpan Term::ExtendedColor
 git clone git://github.com/trapd00r/ls--.git
@@ -55,25 +87,24 @@ make && su -c 'make install'
 
 cp ls++.conf $HOME/.ls++.conf
 
-## Install nodejs, npm
+echo 'npm'
 clear;
-sudo apt-get install nodejs
-sudo apt-get install npm
-sudo npm install -g n
-sudo n latest
-sudo n current || sudo n lts
+npm -v
+if [ $? -ne 0 ]; then
+	echo | sudo apt install npm
+fi
 
-## Install nvm
+echo 'nvm'
 clear;
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-source ~/.bashrc
+nvm --version
+if [ $? -ne 0 ]; then
+	wget https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+	source ~/.bashrc
+	nvm install node
+	nvm install --lts
+fi
 
-## Install VLC
-clear;
-sudo apt-get install vlc
-
-## Install autojump
+echo 'autojump'
 clear;
 sudo apt-get install autojump
 if [ $? -ne 0 ]; then
@@ -91,39 +122,60 @@ if [ $? -ne 0 ]; then
 	exit $?
 fi
 
-## Install Linux tools
+echo 'Linux tools'
 clear;
-v=`uname -r`
-sudo apt-get install linux-tools-`${s/-generic/}` -y
-sudo apt-get install strace
+dpkg -l 'linux-tools'
+if [ $? -ne 0 ]; then
+	v=`uname -r`
+	echo | sudo apt-get install linux-tools-`${s/-generic/}`
+	sudo apt-get install strace
+fi
 
-## Install tldr
+echo 'tldr'
 clear;
-sudo npm install -g tldr
+tldr --version
+if [ $? -ne 0 ]; then
+	sudo npm install -g tldr
+fi
 
-## Install Docker
+echo 'Docker'
 clear;
-echo | sudo apt install docker.io
+docker -v
+if [ $? -ne 0 ]; then
+	echo | sudo apt install docker.io
+fi
 
-## Install Groff
+echo 'Groff'
 clear;
-sudo apt install groff
+groff -v
+if [ $? -ne 0 ]; then
+	sudo apt install groff
+fi
 
-## Install f.lux
+echo 'f.lux'
+clear;
 echo | sudo add-apt-repository ppa:nathan-renniewaldock/flux
 sudo apt update
 echo | sudo apt-get install fluxgui
 
-## Install Doxygen
-echo | sudo apt install doxygen
+echo 'Doxygen'
+clear;
+doxygen --version
+if [ $? -ne 0 ]; then
+	echo | sudo apt install doxygen
+fi
 
-## Install libgraph
+echo 'libgraph'
+clear;
 wget http://download.savannah.gnu.org/releases/libgraph/libgraph-1.0.2.tar.gz
 tar -xvzf libgraph-1.0.2
 cd libgraph-1.0.2
 ./configure
-sudo make
-sudo make install
+sudo make && make install
 sudo cp /usr/local/lib/libgraph.* /usr/lib
 
-## TODO: Pipe echo wherever needed, no input from user should be required
+echo 'ipfs'
+# dpkg --print-architecture
+wget https://dist.ipfs.io/go-ipfs/v0.4.16/go-ipfs_v0.4.16_linux-amd64.tar.gz
+tar xvfz go-ipfs_v0.4.16_linux-amd64.tar.gz
+sudo mv go-ipfs/ipfs /usr/local/bin/ipfs

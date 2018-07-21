@@ -50,5 +50,6 @@ Bundle 'xolox/vim-notes'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
+Bundle 'lervag/vimtex'
 
 filetype plugin indent on
