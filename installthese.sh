@@ -179,3 +179,9 @@ echo 'ipfs'
 wget https://dist.ipfs.io/go-ipfs/v0.4.16/go-ipfs_v0.4.16_linux-amd64.tar.gz
 tar xvfz go-ipfs_v0.4.16_linux-amd64.tar.gz
 sudo mv go-ipfs/ipfs /usr/local/bin/ipfs
+
+echo 'twine'
+twine --version
+if [ $? -ne 0 ]; then
+  echo | sudo apt install twine
+fi
