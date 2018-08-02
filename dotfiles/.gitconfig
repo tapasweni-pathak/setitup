@@ -22,16 +22,16 @@
     ui = always
 [color "diff"]
     meta = green bold
-    commit = yellow bold
+    commit = blue bold
     old = red bold
-    new = green bold
+    new = magenta bold
 [color "branch"]
     current = green bold
-    local = yellow
+    local = blue bold
     remote = magenta
 [color "status"]
     added = green bold
-    changed = yellow bold
+    changed = blue bold
     untracked = magenta
 [help]
     autocorrect = 1

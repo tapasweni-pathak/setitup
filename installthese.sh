@@ -185,3 +185,22 @@ twine --version
 if [ $? -ne 0 ]; then
   echo | sudo apt install twine
 fi
+
+echo 'cmake'
+cmake --version
+if [ $? -ne 0 ]; then
+	echo | sudo apt install cmake
+fi
+
+echo 'python-dev'
+dpkg -s python-dev
+if [ $? -ne 0 ]; then
+	echo | sudo apt install python-dev
+fi
+
+echo 'LTTng and perf'
+dpkg -s lttng-tools
+if [ $? -ne 0 ]; then
+	echo | sudo apt install lttng-tools
+	echo | sudo apt install linux-tools-common
+fi
