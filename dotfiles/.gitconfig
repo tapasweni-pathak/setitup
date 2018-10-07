@@ -18,6 +18,11 @@
     hrst = reset --hard
     co = checkout
     gl = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    s = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
+    r = shortlog -sn --no-merges
+    dbm = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
+    tom = !git branch --merged master | grep -Ev \"(staging)\"
+
 [color]
     ui = always
 [color "diff"]
