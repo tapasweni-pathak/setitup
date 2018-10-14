@@ -24,6 +24,8 @@ ssh -T git@github.com
 git clone git@github.com:jeaye/stdman.git
 cd stdman && ./configure && make install
 
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+
 welcome(){
 
 
