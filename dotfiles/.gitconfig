@@ -22,7 +22,10 @@
     r = shortlog -sn --no-merges
     dbm = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
     tom = !git branch --merged master | grep -Ev \"(staging)\"
-
+    dws = git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -
+    nuke = !git co master && sh -c 'git br -d $1' -
+    lg = log -p
+    me = config user.name
 [color]
     ui = always
 [color "diff"]

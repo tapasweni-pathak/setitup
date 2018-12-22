@@ -26,6 +26,15 @@ cd stdman && ./configure && make install
 
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 
+if [ "$(uname)" == "Darwin" ]; then
+	sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+	mkdir ~/.npm
+	npm config set prefix '~/.npm'
+	export PATH=~/.npm/bin:$PATH
+	source ~/.profile
+fi
+
 welcome(){
 
 
