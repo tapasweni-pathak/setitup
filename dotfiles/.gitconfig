@@ -10,6 +10,10 @@
     editor = vi
     excludesfile = ~/.gitignore
 [alias]
+    rau = remote add upstream
+    fu = fetch upstream
+    cm = checkout master
+    mum = merge upstream/master
     amend = commit --amend --all
     st = status
     cl = clone
