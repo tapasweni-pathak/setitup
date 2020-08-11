@@ -21,14 +21,6 @@ if [ $? -ne 0 ]; then
 fi
 
 
-echo 'sublime'
-clear;
-subl --version
-if [ $? -ne 0 ]; then
-	sudo add-apt-repository ppa:webupd8team/sublime-text-3;
-	sudo apt-get install sublime-text-installer;
-fi
-
 echo 'Mutt'
 clear;
 mutt -v
@@ -151,12 +143,6 @@ groff -v
 if [ $? -ne 0 ]; then
 	sudo apt install groff
 fi
-
-echo 'f.lux'
-clear;
-echo | sudo add-apt-repository ppa:nathan-renniewaldock/flux
-sudo apt update
-echo | sudo apt-get install fluxgui
 
 echo 'Doxygen'
 clear;
