@@ -108,7 +108,6 @@ sudo apt-get install python3-setuptools
 sudo apt-get install autojump
 echo "source /usr/share/autojump/autojump.bash" >> ~/.bashrc
 sudo chmod 755 /usr/share/autojump/autojump.bash
-sudo apt install bashdb
 source ~/.bashrc
 if [ $? -ne 0 ]; then
 	exit $?
