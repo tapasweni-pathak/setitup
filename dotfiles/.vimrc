@@ -51,5 +51,6 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'lervag/vimtex'
+Bundle 'arrufat/vala.vim'
 
 filetype plugin indent on
